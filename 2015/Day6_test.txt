@@ -1,0 +1,5 @@
+toggle 0,10 through 10,19
+turn off 5,0 through 5,19
+turn off 6,10 through 7,19
+turn off 0,0 through 19,0
+turn on 5,0 through 19,19

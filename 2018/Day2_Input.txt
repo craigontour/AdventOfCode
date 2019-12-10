@@ -1,0 +1,9 @@
+abcdef
+aaabbb
+ababab
+abcabc
+aabbbb
+bbcdee
+ccfghj
+--ddd%
+gggijklmnop

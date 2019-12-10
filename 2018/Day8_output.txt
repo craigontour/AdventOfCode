@@ -1,0 +1,20 @@
+New  ## 0 ## c=2 | m=3 | data.length =14 | metaTotal =0
+New  ## 1 ## c=0 | m=3 | data.length =12 | metaTotal =0
+  10
+  11
+  12
+Out  ## 1 ## c=0 | m=3 | data.length =12 | metaTotal =33
+Post ## 1 ## c=2 | m=3 | data.length =9 | metaTotal =66
+New  ## 2 ## c=1 | m=1 | data.length =7 | metaTotal =66
+New  ## 3 ## c=0 | m=1 | data.length =5 | metaTotal =66
+  99
+Out  ## 3 ## c=0 | m=1 | data.length =5 | metaTotal =165
+Post ## 3 ## c=1 | m=1 | data.length =4 | metaTotal =264
+  2
+Out  ## 3 ## c=1 | m=1 | data.length =4 | metaTotal =266
+Post ## 3 ## c=2 | m=3 | data.length =3 | metaTotal =266
+  1
+  1
+  2
+Out  ## 3 ## c=2 | m=3 | data.length =3 | metaTotal =270
+      Answer:270
