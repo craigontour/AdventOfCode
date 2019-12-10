@@ -1,18 +1,3 @@
-# Re-write with Class in Ruby
-
-# Intcode programs are given as a list of integers; these values are used as the initial state for the computer's memory.
-# When you run an Intcode program, make sure to start by initializing memory to the program's values.
-# A position in memory is called an address (for example, the first value in memory is at "address 0").
-
-# Instructions:
-#  - opcode are beginning of instruction
-#  - then parameters
-#  - current instruction is pointer
-
-
-# PROBLEM is DATA needs to be accessible globally
-# define as $data ?
-
 require 'pp'
 
 def get_data(input)
@@ -41,7 +26,6 @@ class Op
     puts "Instr 30-39:  #{instr[30..39]}"
     puts "Instr 40-49:  #{instr[40..49]}"
   end
-
   def to_s
     printInstr
     puts "Opcode: #{@opcode}"
@@ -159,20 +143,12 @@ def ITC(data, i, input)
 
     # Updates to the data instr are done within the op class object
     # so need to use that set for next op, else loads original set
-    # data = op.instr
+    data = op.instr
   end
 
   return input
 end
 
 $debug = false
-file = 'Day5_input.txt'
-
-# DAY 5 PART 1
-puts "Day 5 Part 1 = #{ITC(get_data(File.readlines(file)), 0, 1)}"
-
-# DAY 5 PART 2
-test = [3,21,1008,21,8,20,1005,20,22,107,8,21,20,1006,20,31,1106,0,36,98,0,0,1002,21,125,20,4,20,1105,1,46,104,999,1105,1,46,1101,1000,1,20,4,20,1105,1,46,98,99]
-
-# puts "Day 5 Test 2 = #{ITC(test, 0, 7)}"
-puts "Day 5 Part 2 = #{ITC(get_data(File.readlines(file)), 0, 5)}"
+file = 'Day7_input.txt'
+puts "Day 7 Part 1 = #{ITC(get_data(File.readlines(file)), 0, 5)}"

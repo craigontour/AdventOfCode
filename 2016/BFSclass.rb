@@ -10,7 +10,20 @@ class Animal
     def speak
         puts 'Hi'
     end
+
+    def changename
+        @name = 'john'
+    end
+
+    def to_s
+        puts @name
+    end
 end
+
+p1 = Animal.new('fred', 1)
+p1.to_s
+p1.changename
+p1.to_s
 
 class BFSList
     attr_accessor :node, :parent
@@ -23,7 +36,6 @@ class BFSList
     end
 end
 
-p1 = Animal.new('fred', 1)
 queue = BFSList.new('1', '2')
 
 pp p1
