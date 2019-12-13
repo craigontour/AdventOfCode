@@ -1,7 +1,5 @@
 # Cheat from: https://github.com/J-Swift/advent-of-code-2019/blob/master/day_07/part_1/solution.rb
 
-
-
 def read_inputs
   File.readlines('day7_input.txt').map(&:strip)[0].split(",").map(&:to_i)
 end

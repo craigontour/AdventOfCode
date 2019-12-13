@@ -98,8 +98,9 @@ class Op
   end
 end
 
-def ITC(data, i, input)  
- 
+def ITC(data, input, phase)  
+
+  i = 0
   while data[i] != 99 do
     op = Op.new(data, data[i], data[i+1..i+3])
 
@@ -146,9 +147,20 @@ def ITC(data, i, input)
     data = op.instr
   end
 
+  puts "output = #{input}"
   return input
 end
 
 $debug = false
-file = 'Day7_input.txt'
-puts "Day 7 Part 1 = #{ITC(get_data(File.readlines(file)), 0, 5)}"
+data = get_data(File.readlines('Day7_input.txt'))
+data = [3,15,3,16,1002,16,10,16,1,16,15,15,4,15,99,0,0]
+
+phases = [4,3,2,1,0]
+inputs = [0,0,0,0,0]
+pass = 0
+for phase in phases
+  puts "pass = #{pass}, input = #{inputs[pass]}, phase = #{phase}"
+  inputs[pass+1] = ITC(data, inputs[pass], phase)
+  pass += 1
+end
+puts inputs
