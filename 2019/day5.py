@@ -1,5 +1,5 @@
 # Day 5
-debug = True
+debug = False
 
 data = open('day5_input.txt').read().split(',')
 data = [int(i) for i in data]
@@ -37,29 +37,29 @@ def op3(modes, i):
 def op4(modes, params):
   return resolvep(modes, 0, params)
 
-def op5(modes, params, i):
-  if (resolvep(modes, 0, params) != 0):
-    return resolvep(modes, 1, params)
-  else:
-    return i + 3
+# def op5(modes, params, i):
+#   if (resolvep(modes, 0, params) != 0):
+#     return resolvep(modes, 1, params)
+#   else:
+#     return i + 3
 
-def op6(modes, params, i):
-  if (resolvep(modes, 0, params) == 0):
-    return resolvep(modes, 1, params)
-  else:
-    return i + 3
+# def op6(modes, params, i):
+#   if (resolvep(modes, 0, params) == 0):
+#     return resolvep(modes, 1, params)
+#   else:
+#     return i + 3
 
-def op7(modes, params):
-  if resolvep(modes, 0, params) < resolvep(modes, 1, params):
-    data[params[2]] = 1
-  else:
-    data[params[2]] = 0
+# def op7(modes, params):
+#   if resolvep(modes, 0, params) < resolvep(modes, 1, params):
+#     data[params[2]] = 1
+#   else:
+#     data[params[2]] = 0
 
-def op8(modes, params):
-  if resolvep(modes, 0, params) == resolvep(modes, 1, params):
-    data[params[2]] = 1
-  else:
-    data[params[2]] = 0
+# def op8(modes, params):
+#   if resolvep(modes, 0, params) == resolvep(modes, 1, params):
+#     data[params[2]] = 1
+#   else:
+#     data[params[2]] = 0
  
 ##############  Main Program  ##############
 
@@ -99,21 +99,21 @@ def main(i, input):
     elif opcode == 4:
       input = op4(modes, data[i+1:i+4])
       i += 2
-    elif opcode == 5:
-      print "op5-before: i is now", i
-      print "modes[0], pos, imm = ", modes[0], data[data[i+1]], data[i+1]
-      i = op5(modes, data[i+1:i+3], i)
-      print "op5-after: i is now", i
-    elif opcode == 6:
-      i = op6(modes, data[i+1:i+3], i)
-    elif opcode == 7:
-      op7(modes, data[i+1:i+4])
-      i += 4
-    elif opcode == 8:
-      print "op8-before: i is now", i
-      op8(modes, data[i+1:i+4])
-      i += 4
-      print "op8-after: i is now", i
+    # elif opcode == 5:
+    #   print "op5-before: i is now", i
+    #   print "modes[0], pos, imm = ", modes[0], data[data[i+1]], data[i+1]
+    #   i = op5(modes, data[i+1:i+3], i)
+    #   print "op5-after: i is now", i
+    # elif opcode == 6:
+    #   i = op6(modes, data[i+1:i+3], i)
+    # elif opcode == 7:
+    #   op7(modes, data[i+1:i+4])
+    #   i += 4
+    # elif opcode == 8:
+    #   print "op8-before: i is now", i
+    #   op8(modes, data[i+1:i+4])
+    #   i += 4
+    #   print "op8-after: i is now", i
     else:
       print("It's all gone wrong",opcode)
       data[i] = 99
@@ -121,10 +121,11 @@ def main(i, input):
     if debug:
       print "after i, input = ", i, input
       print ''
-      a = raw_input('pause...')
-      if a == 'x':
-        data[i] = 99
-        input = -1
+      if debug:
+        a = raw_input('pause...')
+        if a == 'x':
+          data[i] = 99
+          input = -1
 
   return input
 

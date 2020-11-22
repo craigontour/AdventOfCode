@@ -2,7 +2,7 @@
 require 'pp'
 
 # Part 1
-input = File.readlines('Day2_input.txt')
+input = File.readlines('day5_input.txt')
 data = input[0].split(',').each.map(&:to_i)
 
 def theProgram (data, input=1)

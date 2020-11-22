@@ -15,7 +15,7 @@ input = File.readlines('Day3_input.txt').to_s
 # Couldn't work it out. 
 
 # Other's solutions used hash of array => int
-grid = {[0,0] => 1}
+grid = { [0, 0] => 1 }
 x = 0
 y = 0
 p grid
