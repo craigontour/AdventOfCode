@@ -9,11 +9,11 @@ encoded = 0
 # Thanks to packrat386 for simplificiation of using eval at
 # https://www.reddit.com/r/adventofcode/comments/3vw32y/day_8_solutions/
 data.each do |l|
-    l.chomp!
-    chars += l.length
-    # puts "#{l} => #{l.inspect}"
-    newchars += eval(l).size
-    encoded += l.inspect.size
+  l.chomp!
+  chars += l.length
+  # puts "#{l} => #{l.inspect}"
+  newchars += eval(l).size
+  encoded += l.inspect.size
 end
 
 puts "Part 1:"

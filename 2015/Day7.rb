@@ -29,9 +29,9 @@ data.each do |l|
   left = ""
 
   op = l.gsub(Regexp.union(trans.keys), trans).       # Lookup Regexp.union
-  gsub(/(.+?) -> (\w+)/) { "%2s = #$1" % $2 }.        # Lookup how this works
-  upcase.                   # Mske upper case
-  split("\n")[0]            # Remove LFCR
+       gsub(/(.+?) -> (\w+)/) { "%2s = #$1" % $2 }.        # Lookup how this works
+       upcase.                   # Mske upper case
+       split("\n")[0]            # Remove LFCR
 
   i = op.split('=')[0].strip    # Left side
   j = op.split('=')[1].strip    # Right side

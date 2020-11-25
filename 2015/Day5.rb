@@ -6,7 +6,7 @@
 # test = 'ugknbfddgicrmopn'
 # c = 0
 
-data = File.readlines("Day5_input.txt")
+data = File.readlines('Day5_input.txt')
 
 # data.each do |line|
 #     puts line
@@ -30,21 +30,21 @@ data = File.readlines("Day5_input.txt")
 
 # PART 2
 
-test = "qjhvhtzxzqqjkmpb"
+test = 'qjhvhtzxzqqjkmpb'
 c = 0
 
 data.each do |line|
-    # puts line
-    if line =~ /([a-z][a-z]).*\1/
-        # puts "Two"
-        if line =~ /([a-z]).\1/
-            puts "#{line.chomp} is nice"
-            c += 1
-        else
-            puts "#{line.chomp} is naughty 2"
-        end
+  # puts line
+  if line =~ /([a-z][a-z]).*\1/
+    puts 'Pairs found'
+    if line =~ /([a-z]).\1/
+      puts "#{line.chomp} is nice"
+      c += 1
     else
-        puts "#{line.chomp} is naughty 1"
+      puts "#{line.chomp} is naughty 2"
     end
+  else
+    puts "#{line.chomp} is naughty 1"
+  end
 end
 puts c

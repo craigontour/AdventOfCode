@@ -1,7 +1,6 @@
 NOT dq -> dr
 kg OR kf -> kh
 ep OR eo -> eq
-44430 -> b
 NOT gs -> gt
 dd OR do -> dp
 eg AND ei -> ej
@@ -46,7 +45,6 @@ ia OR ig -> ih
 bk LSHIFT 1 -> ce
 y OR ae -> af
 NOT ca -> cb
-e AND f -> h
 ia AND ig -> ii
 ck AND cl -> cn
 NOT jh -> ji
@@ -65,12 +63,10 @@ er OR es -> et
 eu OR fa -> fb
 jp OR ka -> kb
 ea AND eb -> ed
-k AND m -> n
 et RSHIFT 3 -> ev
 et RSHIFT 5 -> ew
 hz RSHIFT 1 -> is
 ki OR kj -> kk
-NOT h -> i
 lv LSHIFT 15 -> lz
 as RSHIFT 1 -> bl
 hu LSHIFT 15 -> hy
@@ -80,7 +76,6 @@ fp OR fv -> fw
 1 AND am -> an
 ap LSHIFT 1 -> bj
 u LSHIFT 1 -> ao
-b RSHIFT 5 -> f
 jq AND jw -> jy
 iu RSHIFT 3 -> iw
 ih AND ij -> ik
@@ -88,7 +83,6 @@ NOT iz -> ja
 de OR dk -> dl
 iu OR jf -> jg
 as AND bd -> bf
-b RSHIFT 3 -> e
 jq OR jw -> jx
 iv AND jb -> jd
 cg OR ch -> ci
@@ -112,14 +106,11 @@ bl OR bm -> bn
 gj RSHIFT 2 -> gk
 cj OR cp -> cq
 gj OR gu -> gv
-b OR n -> o
-o AND q -> r
 bi LSHIFT 15 -> bm
 dy RSHIFT 1 -> er
 cu AND cw -> cx
 iw OR ix -> iy
 hc OR hd -> he
-0 -> c
 db OR dc -> dd
 kk RSHIFT 2 -> kl
 eq LSHIFT 1 -> fk
@@ -159,7 +150,6 @@ kk AND kv -> kx
 NOT ii -> ij
 kl AND kr -> kt
 jk LSHIFT 15 -> jo
-e OR f -> g
 NOT bs -> bt
 hi AND hk -> hl
 hz OR ik -> il
@@ -190,7 +180,6 @@ dt LSHIFT 15 -> dx
 et RSHIFT 1 -> fm
 dy RSHIFT 3 -> ea
 fp AND fv -> fx
-NOT p -> q
 dd RSHIFT 2 -> de
 eu AND fa -> fc
 ba AND bc -> bd
@@ -213,7 +202,6 @@ ce OR cd -> cf
 il AND in -> io
 dd RSHIFT 1 -> dw
 NOT lo -> lp
-c LSHIFT 1 -> t
 dd RSHIFT 3 -> df
 dd RSHIFT 5 -> dg
 lh AND li -> lk
@@ -230,7 +218,6 @@ ln AND lp -> lq
 kk RSHIFT 5 -> kn
 ea OR eb -> ec
 ci AND ct -> cv
-b RSHIFT 2 -> d
 jp RSHIFT 1 -> ki
 NOT cr -> cs
 NOT jd -> je
@@ -283,9 +270,6 @@ kl OR kr -> ks
 1 AND ht -> hu
 df AND dg -> di
 NOT ag -> ah
-d OR j -> k
-d AND j -> l
-b AND n -> p
 gf OR ge -> gg
 gg LSHIFT 1 -> ha
 bn RSHIFT 5 -> bq
@@ -297,10 +281,7 @@ as RSHIFT 5 -> av
 bo AND bu -> bw
 hz AND ik -> im
 bp AND bq -> bs
-b RSHIFT 1 -> v
-NOT l -> m
 bp OR bq -> br
-g AND i -> j
 br AND bt -> bu
 t OR s -> u
 hz RSHIFT 5 -> ic
