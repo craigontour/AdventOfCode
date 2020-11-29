@@ -19,7 +19,7 @@ puts
 # PART 2
 arr.each do |a|
   pp a.group_by { |x| x }.
-  map { |element, matches| [element, matches.length]}.
-  to_h.sort_by{|e,v| -v}.
-  min_by{|k,v| v}[0]
+  map { |element, matches| [element, matches.length] }.
+  to_h.sort_by { |e, v| -v }.
+  min_by { |k, v| v }[0]
 end

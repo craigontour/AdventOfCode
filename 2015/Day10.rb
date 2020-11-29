@@ -1,13 +1,20 @@
-inp = '1113122113'
+input = '1113122113'
 
-(1..50).each do |i|
-  ans = ''
-  inp.chars.chunk { |c| c }.each { |c, ch| ans += "#{ch.length}#{c}" }
-  puts "#{i}" #": #{inp} => #{ans}"
-  inp = ans
+def main(loops, input)
+  (1..loops).each do |_|
+    input = input.chars.chunk { |c| c }.map { |c, ch| [ch.size, c] }.join
+  end
+  return input
 end
 
 # Part 1: 40 times
+puts main(40, input).length
 
 # Part2: 50 times
-puts inp.length
+puts main(50, input).length
+
+# DONT USE THIS FOR EACH LOOP, REASSIGNING THE STRING TAKES HOURS !!
+    # ans = ''
+    # inp.chars.chunk { |c| c }.each { |c, ch| ans += "#{ch.length}#{c}" }
+    # puts "#{i}" #": #{inp} => #{ans}"
+    # inp = ans
