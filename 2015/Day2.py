@@ -6,7 +6,7 @@ area = 0
 
 for box in open("day2_input.txt").readlines():
   # print ("Box = ", box)
-  a,b ,c = np.sort([int(dim) for dim in box.split('x')])
+  a, b, c = np.sort([int(dim) for dim in box.split('x')])
   area = (3 * a * b) + (2 * b * c) + (2 * a * c)
   total_area += area
 
