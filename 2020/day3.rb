@@ -1,3 +1,4 @@
+# keywords: def, each index
 
 def getInput(t)
   return File.open("day3.#{t}").readlines()
@@ -19,8 +20,9 @@ def getSlopes(input, slopes)
     end
     treeCount << trees
   end
-  pp treeCount
+  # pp treeCount
   return treeCount.reduce(:*)
 end
 
-puts "Part 1: #{getSlopes(getInput('txt'), [ [1, 1], [3, 1], [5, 1], [7, 1], [1, 2] ])}"
+puts "Part 1: #{getSlopes(getInput('txt'), [ [3, 1] ])}"
+puts "Part 2: #{getSlopes(getInput('txt'), [ [1, 1], [3, 1], [5, 1], [7, 1], [1, 2] ])}"

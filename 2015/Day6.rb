@@ -1,4 +1,4 @@
-# Day 6 2015
+# keywords: 2d array, grid
 
 require 'pp'
 data = File.readlines('Day6_input.txt')

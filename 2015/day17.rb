@@ -1,35 +1,22 @@
-
+# keywords: combination, reduce, group
 nums = File.open('day17.txt').readlines().each.map(&:to_i)
 
-nums = [ 20, 15, 10, 5, 5 ]
+# nums = [ 20, 15, 10, 5, 5 ]
+qty = 150
+combos = []
 
-part1 = []
-
-(2..(nums.length-1)).each do |i|
-  puts "Permutations for #{i}"
-  nums.permutation(i).each do |p|
-    if p.reduce(:+) == 25 && !part1.include?(p.sort)
-      puts "
-      Part1: #{part1}
-      include perm? #{p}"
-      part1 << p.sort
-    end
+(1..(nums.length-1)).each do |i|
+  # puts "Combinations for #{i}"
+  nums.combination(i).each do |combo|
+    combos << combo if combo.reduce(:+) == qty
+    # puts combos
   end
 end
 
-pp part1
+pp "Part 1: #{combos.length}"
+pp "Part 2: ?"
+combos.group_by(&:size).each { |k,v| puts "#{k} containers, used #{v.length} times" }
 
-exit()
-
-# def reCalc (arr1, arr2)
-#   if arr1.nil?
-#     puts "arr1: #{arr1}, arr2: #{arr2}"
-#   if arr1.reduce(:+) + arr2[0] == 25
-#     puts "#{arr1} + #{arr2} = 25"
-#     return arr1 + arr2
-#   elsif arr2.length > 1
-#     reCalc(arr1 + [arr2[0]], arr2[1..(arr2.length)])
-#   else
-#     return arr1
-#   end
-# end
+# https://www.reddit.com/r/adventofcode/comments/3x6cyr/day_17_solutions/
+m = combos.map(&:size).min
+pp combos.count { |x| x.size == m }

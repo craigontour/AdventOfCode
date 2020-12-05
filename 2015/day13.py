@@ -1,3 +1,5 @@
+# keywords: hash/dict, array, permutation, in array
+
 from itertools import permutations
 
 data = open("day13_input.txt").readlines()

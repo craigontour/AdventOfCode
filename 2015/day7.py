@@ -1,3 +1,5 @@
+# keywords: regex, array, dict
+
 import re
 
 test = 0

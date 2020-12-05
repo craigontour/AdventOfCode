@@ -1,3 +1,5 @@
+# keywords: iteration, permmuation, 2D array
+
 from itertools import permutations
 
 places = set()

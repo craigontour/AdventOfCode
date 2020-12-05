@@ -1,3 +1,5 @@
+# keywords: hash/dict, array
+
 import numpy as np
 
 racers = {}

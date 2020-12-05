@@ -1,3 +1,5 @@
+# keywords: regex match/captures, count
+
 one = two = 0
 data = File.readlines('day2.txt')
 

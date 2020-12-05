@@ -1,3 +1,5 @@
+# keywords: json, json.loads, dict
+
 import json
 
 def n(j):
