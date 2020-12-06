@@ -6,14 +6,18 @@ pstr = ''
 passports = []
 c = 0
 
-data = open('day4.txt').readlines()
+data = []
+for line in open('day4.txt', 'r'):
+  data.append(line.strip())
+
+# data = open('day4.txt').readlines()
 
 for line in data:
-  
-  if len(line.strip()) != 0:
+
+  if len(line) != 0:
     pstr += line.strip() + ' '
   
-  if len(line.strip()) == 0 or c == len(data)-1:
+  if len(line) == 0 or c == (len(data)-1):
     # remove extraneous line feed
     pstr = pstr[0:(len(pstr)-1)]
 
@@ -30,16 +34,11 @@ for line in data:
     # Part 1 criteria for valid passport
     if len(passport) == 8:
       passports.append(passport)
-      print("Valid passport = ", passport)
-      input()
-    elif len(passport) == 7 and passport.get('cid') != None:
+    elif len(passport) == 7 and passport.get('cid') == None:
       passports.append(passport)
-      print("Valid passport = ", passport)
-      input()
 
     pstr = ''
 
   c += 1
 
 print("Part 1:", len(passports))
-# ANSWER IS WRONG!!!!
