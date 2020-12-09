@@ -1,4 +1,5 @@
-# AofC Day 4 2015
+# keywords: digest, md5, hex
+
 # find lowest numbered MD5 hash for iwrupvqb... which begins 00000 (5 0's)
 
 # Part 1 - find hash with leading 5 0's

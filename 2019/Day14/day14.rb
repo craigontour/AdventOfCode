@@ -1,4 +1,4 @@
-# This puzzle uses recursion to determine the 
+# keywords: queue, hash, recursion 
 
 def pause
   r = gets.chomp

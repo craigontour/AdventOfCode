@@ -1,5 +1,6 @@
+# keywords: =~, pattern matching
+
 # Day 5
-# pattern matching
 # Match for 3 vowels, at least 1 letter twice in a row, and
 # does not contain ab, cd, pq, or xy
 

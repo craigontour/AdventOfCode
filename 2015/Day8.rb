@@ -1,4 +1,8 @@
+# keywords: eval (evaluates a Ruby expression in a string), inspect
+# eval: https://apidock.com/ruby/Kernel/eval
+
 require 'pp'
+
 # data = File.readlines("Day8_input.txt")
 data = File.readlines("Day8_test.txt")
 lines = data.length

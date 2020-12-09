@@ -1,4 +1,5 @@
-# Day 11
+# keywords: ordinal, chr of ascii
+
 require 'pp'
 
 input = 'cqjxjnds'

@@ -1,6 +1,4 @@
-# keywords: iteration, permmuation, 2D array
-
-from itertools import permutations
+# keywords: 2D array, dict/hash, set, uniq
 
 places = set()
 p = []

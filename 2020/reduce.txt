@@ -1,0 +1,28 @@
+Reduce is a function that takes a list and combines, or "reduces", all the elements down to one value by taking the first two values and combining them, then combining that result with the next value, and so on.
+
+Of course, you might want to decide how things get combined, and so you can specify another function that tells you how to combine things.
+
+For example, say I have a list of numbers: [1, 2, 5, 6, 2]. If I call reduce on this list, and specify that the combining operation is "+", then I get ((((1+2)+5)+6)+2) = 16.
+
+In ruby, that could look like [1, 2, 5, 6, 2].reduce(:+). ":+" is fancy ruby syntax that refers to the addition operator.
+
+Essentially, we've just rewritten sum here. Kinda lame, but we can use this in more cool ways, as I will explain.
+
+In the AoC challenge, each "chunk" is a list.
+# this is one chunk from the input, representing one customs form
+[ ['a', 'b', 's'], # list 1
+  ['x', 'y', 'q', 'z'], #  list2
+  ['x', 'a', 'b'] ] # list 3
+Each value in the list is a list of chars.
+The first part of the challenge asks to the get the size of all the characters that appears once in each chunk (and then sum all the sizes together).
+I use reduce here to combine all the lines from the chunk.
+I look at the first two entries of the chunk, list1 and list2 and ask the question, "which characters appears at least once in either of these two lists?"
+Then I take that result and compare that to list3, and so on.
+The end result will be a list that contains all the characters that occurred at least once in all the previous lists.
+I "ask the question" by passing in a comparison function.
+
+In part one, the comparison function is "|". If you're not familiar with set notation, "|" just means "union" or "what occurred in either of these two things".
+
+In part two, I use the "&" intersection function instead, which tells me only the things that are common across two things.
+
+So long story short reduce(:&) means I'm calling the reduce function on a list using the "&" intersection operator. Apologies if you already knew all that stuff above.

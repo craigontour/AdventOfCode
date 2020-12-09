@@ -1,4 +1,4 @@
-
+# keywords: hash, max_by, select
 
 race = 2503
 h = {}

@@ -1,3 +1,5 @@
+# purpose: get all permutations of 2 keys, iterate through consecutive elements in array 
+# keywords: permutation, map, each_cons
 h = {}
 
 me = 'Craig'

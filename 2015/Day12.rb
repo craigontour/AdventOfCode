@@ -1,5 +1,6 @@
+# keywords: json, gsub match, reduce, inject
+
 require 'json'
-require 'pp'
 
 data = File.read('Day12_input.txt')
 

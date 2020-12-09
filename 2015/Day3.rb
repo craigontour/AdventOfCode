@@ -1,3 +1,5 @@
+# keywords: grid, hash of array to int, hash/array merge
+
 require 'pp'
 
 puts 'Day 3', '+++++++++++++++++++++++++'

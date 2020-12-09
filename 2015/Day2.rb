@@ -1,3 +1,5 @@
+# keywords: hash, area
+
 # Part 1
 total = 0
 File.readlines('Day2_input.txt').each do |b|

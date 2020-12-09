@@ -1,3 +1,5 @@
+# keywords: chunk (size of chunks of data), map, join
+
 input = '1113122113'
 
 def main(loops, input)

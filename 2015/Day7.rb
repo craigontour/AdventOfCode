@@ -1,4 +1,5 @@
-# Day 7 2015
+# keywords: transform hash key to value with regex, union, gsub, stack
+
 require 'pp'
 
 # Series of instructions:-
