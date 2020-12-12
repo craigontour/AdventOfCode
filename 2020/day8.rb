@@ -44,6 +44,12 @@ i = acc = change_index = change_acc = 0
 inst = arg = ''
 instructions = []
 
+def nop(a)
+end
+
+def jmp(a)
+end
+
 while i < input.length do
   if instructions.include?(i)
     instructions = instructions[0...change_index]

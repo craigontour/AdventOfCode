@@ -56,11 +56,19 @@ puts "Part 1 v2: #{part1}"
 # members = []
 # groups = File.open(f).read().split("\n\n")
 
-# Then split the group into its members
-# groups.each do |group|
-#   members << group.split("\n")
-# end
-
-puts "Part 2:"
-
 # Part 2
+
+# FORMS.inject(0) do |part1, g| 
+#   part1 += g.each_line(chomp: true).map(&:chars).flatten.uniq.count
+# end
+# puts "Part 1 v2: #{part1}"
+
+# # Part 1 - one line!!
+# require 'set'  # << what is this?
+# part1 = FORMS.map { |group| group.gsub("\n", '').split('').to_set.length }.reduce(:+)
+# puts "Part 1 v2: #{part1}"
+
+
+# pp members
+
+# puts "Part 2:"
