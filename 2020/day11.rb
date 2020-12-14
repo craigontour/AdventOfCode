@@ -57,12 +57,14 @@ def countInWiderMatrix(matrix, topLeft, bottomRight, exclusion, debug)
   f = 1
   for y in topLeft[1]..bottomRight[1] do
     for x in topLeft[0]..bottomRight[0] do
-      break if occupied.length == 8
 
+      puts "f: #{f}, f*y: #{f*y}, f*x: #{f*x}" if debug
+
+      break if occupied.length == 8
+      next if occupied.include?([y, x])
       next if (x == exclusion[0] && y == exclusion[1])
 
       # puts "x: #{x}, y: #{y}, seat: #{seats[y][x]}"
-      puts "f: #{f}, f*y: #{f*y}, f*x: #{f*x}" if debug
       if y < 0
         if x < 0
           occupied << [-1,-1]
@@ -99,13 +101,17 @@ def countInWiderMatrix(matrix, topLeft, bottomRight, exclusion, debug)
   end
   puts "occupied: #{occupied}, occ.len: #{occupied.length}" if debug
   return count
+  exit()
 end
 
 def updateSeats(seats, debug, tolerance)
   updated = []
   for y in 0..(H-1) do
     row = ''
+
     for x in 0..(W-1) do
+      next if seats[y][x] == '.'
+      
       if tolerance == 4
         c = countInSubMatrix(seats, [x-1, y-1], [x+1,y+1], [x, y], debug)
       else
@@ -125,6 +131,7 @@ def updateSeats(seats, debug, tolerance)
         row += seats[y][x]
       end
     end
+    
     updated << row
   end
   return updated
