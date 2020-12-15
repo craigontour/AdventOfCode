@@ -33,3 +33,13 @@ puts File.read('day6.tst').split("\n\n").inject(0) { |t, g|
           .uniq
           .count
   }
+
+  # INJECT https://stackoverflow.com/questions/710501/need-a-simple-explanation-of-the-inject-method
+  # You can think of the first block argument as an accumulator: 
+  # the result of each run of the block is stored in the 
+  # accumulator and then passed to the next execution of the 
+  # block. In the case of the code shown above, you are defaulting 
+  # the accumulator, result, to 0. Each run of the block adds the
+  # given number to the current total and then stores the result 
+  # back into the accumulator. The next block call has this new 
+  # value, adds to it, stores it again, and repeats.

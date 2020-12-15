@@ -38,10 +38,12 @@ puts "Part 1 Me: #{part1}"
 
 FORMS = File.read('Day6.txt').split("\n\n")
 
-FORMS.inject(0) do |part1, g| 
+FORMS.inject(0) do |part1, g|
   part1 += g.each_line(chomp: true).map(&:chars).flatten.uniq.count
 end
 puts "Part 1 v2: #{part1}"
+
+exit()
 
 # Part 1 - one line!!
 require 'set'  # << what is this?
