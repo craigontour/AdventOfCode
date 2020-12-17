@@ -29,7 +29,7 @@ end
 # puts "Part 1: #{mem.reduce(&:+)}"
 
 mask = ''
-@mem = Array.new(65536, 0)
+@mem = {}
 
 def applyMask2(mask, addr)
   ad = ''
@@ -62,6 +62,7 @@ def changeX(addr, value)
     end
   else
     # puts "addr: #{addr}, write to mem #{addr.to_i(2)}, value: #{value}"
+    @mem[addr.to_i(2)] ||= []
     @mem[addr.to_i(2)] = value
   end
 end
@@ -80,11 +81,13 @@ def f(a, v)
         puts "In #{a} replace X at #{i} with '0' and repeat" if @debug
         a[i] = '0'
         f(a, v)
+        @mem[a.to_i(2)] ||= []
         @mem[a.to_i(2)] = v
 
         puts "In #{a} replace X at #{i} with '1' and repeat" if @debug
         a[i] = '1'
         f(a, v)
+        @mem[a.to_i(2)] ||= []
         @mem[a.to_i(2)] = v
       end
     end
