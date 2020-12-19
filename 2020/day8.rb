@@ -1,4 +1,4 @@
-# keywords: __FILE__, case, eval, break, include?
+# keywords: __FILE__, case, eval / exec, break, include?
 
 day = File.expand_path(__FILE__).split('/')[-1].split('.')[0]
 
